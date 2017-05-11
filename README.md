@@ -27,7 +27,34 @@ Step 2. Add the dependency
 
 > Feel free to Contribute
 
+### Sample
 
+- First you have to Create Object of your ApiInterface like below : 
+```sh
+ApiInterface apiService =
+                        ApiClient.getClient().create(ApiInterface.class);
+                Call<Sample> responseCall = apiService.VIDEO_NOTY_CALL();
+```
+- After then you have to Implement this method (Here Default Retry Count is 0)
+```sh
+ RetryHelper.enqueueRetry(responseCall, 3, new CustomCallback<Sample>() {
+                    @Override
+                    public void onFailResponse() {
+                        // Here you get the fail callback
+                        Toast.makeText(MainActivity.this, "Failed After Retry", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onResponse(Call<Sample> call, Response<Sample> response) {
+                        // Code of Success
+                    }
+
+                    @Override
+                    public void onFailure(Call<Sample> call, Throwable t) {
+                        // Code of Failure
+                    }
+                });
+```
 
 License
 --------
