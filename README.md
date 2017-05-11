@@ -64,7 +64,14 @@ I already added bellow Repos in this Library.
 compile 'com.squareup.retrofit2:retrofit:2.2.0'
 compile 'com.squareup.retrofit2:converter-gson:2.0.2'
 ```
-
+### proguard-rules.pro
+```
+-dontnote retrofit2.Platform
+-dontwarn retrofit2.Platform$Java8
+-keepattributes Signature
+-keepattributes Exceptions
+-dontwarn okio.**
+```
 ### Todos
 
  - Put listener for Every Retries
