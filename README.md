@@ -21,11 +21,6 @@ Step 2. Add the dependency
 	}
 ```
 
-### Todos
-
- - Put listener for Every Retries
-
-> Feel free to Contribute
 
 ### Sample
 
@@ -56,7 +51,14 @@ ApiInterface apiService =
                 });
 ```
 
-License
+### Todos
+
+ - Put listener for Every Retries
+ - Put method for Each fail Response
+
+> Feel free to Contribute
+
+### License
 --------
 
     Copyright 2017 Harsh Dalwadi
