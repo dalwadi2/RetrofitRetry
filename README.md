@@ -1,7 +1,7 @@
 # RetrofitRetry
 
 [![](https://jitpack.io/v/dalwadi2/RetrofitRetry.svg)](https://jitpack.io/#dalwadi2/RetrofitRetry)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.dalwadi2/RetrofitRetry/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.dalwadi2/RetrofitRetry)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.dalwadi2/retrofit-retry/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.dalwadi2/retrofit-retry)
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 
 How to use this lib in your project: 
@@ -26,7 +26,7 @@ Step 2. Add the dependency
 or
 
 ```sh
-	compile 'io.github.dalwadi2:RetrofitRetry:1.0.0'
+	compile 'io.github.dalwadi2:retrofit-retry:1.0.0'
 ```
 
 ### Sample
