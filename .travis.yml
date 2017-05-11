@@ -10,8 +10,6 @@ android:
     - extra-android-m2repository # for design library
     - android-25
 
-script:
-   - ./gradlew build connectedCheck
 env:
   matrix:
-    - ANDROID_SDKS=android-19,sysimg-19  ANDROID_TARGET=android-25  ANDROID_ABI=armeabi-v7a
+    - ANDROID_SDKS=android-25,sysimg-25  ANDROID_TARGET=android-25  ANDROID_ABI=armeabi-v7a
