@@ -1,6 +1,6 @@
 # RetrofitRetry
 
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-RetrofitRetry-blue.svg?style=flat-square)](https://android-arsenal.com/details/1/5739)
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-RetrofitRetry-blue.svg?style=flat)](https://android-arsenal.com/details/1/5739)
 [![API](https://img.shields.io/badge/API-14%2B-orange.svg?style=flat)](https://android-arsenal.com/api?level=14)
 [![](https://jitpack.io/v/dalwadi2/RetrofitRetry.svg)](https://jitpack.io/#dalwadi2/RetrofitRetry/v1.1)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.dalwadi2/retrofit-retry/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.dalwadi2/retrofit-retry)
