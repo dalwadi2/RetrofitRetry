@@ -1,6 +1,6 @@
 *.iml
 .gradle
-/local.properties
+#/local.properties
 /.idea/workspace.xml
 /.idea/libraries
 .DS_Store
@@ -12,5 +12,3 @@ app/libs/
 app/src/main/res/drawable/
 retrofitretryhelper/libs/
 retrofitretryhelper/src/main/res/drawable/
-#private_key_sender.asc
-#public_key_sender.asc
