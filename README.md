@@ -21,7 +21,11 @@ Step 2. Add the dependency
 		compile 'com.github.User:Repo:Tag'
 	}
 ```
+or
 
+```sh
+	compile 'io.github.dalwadi2:RetrofitRetry:1.0.0'
+```
 
 ### Sample
 
