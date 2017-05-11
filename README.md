@@ -23,7 +23,7 @@ Step 2. Add the dependency
 License
 --------
 
-    Copyright 2016 Alejandro Zürcher
+    Copyright 2017 Harsh Dalwadi
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
