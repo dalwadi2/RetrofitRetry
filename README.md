@@ -74,8 +74,8 @@ compile 'com.squareup.retrofit2:converter-gson:2.0.2'
 ```
 ### Todos
 
- - Put listener for Every Retries
- - Put method for Each fail Response
+* [x] Put listener for Every Retries
+* [x] Put method for Each fail Response
 
 > Feel free to Contribute
 
