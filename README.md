@@ -4,6 +4,7 @@
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.dalwadi2/RetrofitRetry/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.dalwadi2/RetrofitRetry)
 
 How to use this lib in your project: 
+
 Step 1. Add the JitPack repository to your build file
 Add it in your root build.gradle at the end of repositories:
 ```sh
