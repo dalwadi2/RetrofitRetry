@@ -9,24 +9,23 @@ How to use this lib in your project:
 Step 1. Add the JitPack repository to your build file
 Add it in your root build.gradle at the end of repositories:
 ```sh
-	allprojects {
-		repositories {
-			maven { url 'https://jitpack.io' }
-		}
+allprojects {
+	repositories {
+		maven { url 'https://jitpack.io' }
 	}
+}
 ```
 
 Step 2. Add the dependency
 ```sh
-
-	dependencies {
-		compile 'com.github.User:Repo:Tag'
-	}
+dependencies {
+	compile 'com.github.dalwadi2:RetrofitRetry:v1.1'
+}
 ```
 or
 
 ```sh
-	compile 'io.github.dalwadi2:retrofit-retry:1.0.0'
+compile 'io.github.dalwadi2:retrofit-retry:1.0.0'
 ```
 
 ### Sample
@@ -56,6 +55,12 @@ ApiInterface apiService =
                         // Code of Failure
                     }
                 });
+```
+> PS: If you are using this library, you don't have to add extra Retrofit 2.0 Repository.
+I already added bellow Repos in this Library.
+```sh
+compile 'com.squareup.retrofit2:retrofit:2.2.0'
+compile 'com.squareup.retrofit2:converter-gson:2.0.2'
 ```
 
 ### Todos
