@@ -80,7 +80,6 @@ compile 'com.squareup.retrofit2:converter-gson:2.0.2'
 > Feel free to Contribute
 
 ### License
---------
 
     Copyright 2017 Harsh Dalwadi
 
