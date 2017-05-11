@@ -19,6 +19,15 @@ Step 2. Add the dependency
 		compile 'com.github.User:Repo:Tag'
 	}
 ```
+
+### Todos
+
+ - Put listener for Every Retries
+
+> Feel free to Contribute
+
+
+
 License
 --------
 
