@@ -1,6 +1,7 @@
 # RetrofitRetry
 
 [![](https://jitpack.io/v/dalwadi2/RetrofitRetry.svg)](https://jitpack.io/#dalwadi2/RetrofitRetry)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.dalwadi2/RetrofitRetry/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.dalwadi2/RetrofitRetry)
 
 How to use this lib in your project: 
 Step 1. Add the JitPack repository to your build file
