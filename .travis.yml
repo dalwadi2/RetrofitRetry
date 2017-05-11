@@ -1,18 +1,14 @@
 language: android
 android:
   components:
-    # Uncomment the lines below if you want to
-    # use the latest revision of Android SDK Tools
-    # - tools
-    # - platform-tools
-
-    # The BuildTools version used by your project
+    - tools # to get the new `repository-11.xml`
+    - tools # see https://github.com/travis-ci/travis-ci/issues/6040#issuecomment-219367943)
+    - platform-tools
     - build-tools-25.0.2
-
-    # The SDK version used to compile your project
     - android-25
 
-
+script:
+   - ./gradlew build connectedCheck
 env:
   matrix:
     - ANDROID_SDKS=android-19,sysimg-19  ANDROID_TARGET=android-25  ANDROID_ABI=armeabi-v7a
