@@ -6,6 +6,12 @@
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.dalwadi2/retrofit-retry/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.dalwadi2/retrofit-retry)
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 
+## Releases:
+
+#### Current release: 1.1.0.
+
+You can see all the library releases [here](https://github.com/dalwadi2/RetrofitRetry/releases).
+
 How to use this lib in your project: 
 ### Gradle
 Step 1. Add the JitPack repository to your build file
