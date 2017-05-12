@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 
 How to use this lib in your project: 
-
+### Gradle
 Step 1. Add the JitPack repository to your build file
 Add it in your root build.gradle at the end of repositories:
 ```sh
@@ -29,7 +29,14 @@ or
 ```sh
 compile 'io.github.dalwadi2:retrofit-retry:1.0.0'
 ```
-
+### Maven
+```sh
+<dependency>
+    <groupId>io.github.dalwadi2</groupId>
+    <artifactId>retrofit-retry</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
 ### Sample
 
 - First you have to Create Object of your ApiInterface like below : 
