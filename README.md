@@ -27,7 +27,7 @@ allprojects {
 Step 2. Add the dependency
 ```sh
 dependencies {
-	compile 'com.github.dalwadi2:RetrofitRetry:v1.1'
+	compile 'com.github.dalwadi2:RetrofitRetry:v1.2'
 }
 ```
 or
