@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
 //apply plugin: 'com.jfrog.bintray'
-apply plugin: 'com.github.dcendents.android-maven'
+//apply plugin: 'com.github.dcendents.android-maven'
 
 group='com.github.dalwadi2'
 android {
@@ -25,232 +25,102 @@ dependencies {
     compile 'com.squareup.retrofit2:retrofit:2.2.0'
     compile 'com.squareup.retrofit2:converter-gson:2.0.2'
 }
-//Properties properties = new Properties()
-//properties.load(project.rootProject.file('local.properties').newDataInputStream())
 
-//def isReleaseBuild() {
-//    return VERSION_NAME.contains("SNAPSHOT") == false
-//}
-//
-//def getReleaseRepositoryUrl() {
-//    return hasProperty('RELEASE_REPOSITORY_URL') ? properties.getProperty("RELEASE_REPOSITORY_URL")
-//            : "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
-//}
-//
-//def getSnapshotRepositoryUrl() {
-//    return hasProperty('SNAPSHOT_REPOSITORY_URL') ? SNAPSHOT_REPOSITORY_URL
-//            : "https://oss.sonatype.org/content/repositories/snapshots/"
-//}
-//
-//def getRepositoryUsername() {
-//    return hasProperty('NEXUS_USERNAME') ? NEXUS_USERNAME : ""
-//}
-//
-//def getRepositoryPassword() {
-//    return hasProperty('NEXUS_PASSWORD') ? NEXUS_PASSWORD : ""
-//}
-//
-//afterEvaluate { project ->
-//    uploadArchives {
-//        repositories {
-//            mavenDeployer {
-//                beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
-//
-//                pom.groupId = properties.getProperty("GROUP")
-//                pom.artifactId = properties.getProperty("POM_ARTIFACT_ID")
-//                pom.version = properties.getProperty("VERSION_NAME")
-//
-//                repository(url: getReleaseRepositoryUrl()) {
-//                    authentication(userName: getRepositoryUsername(), password: getRepositoryPassword())
-//                }
-//                snapshotRepository(url: getSnapshotRepositoryUrl()) {
-//                    authentication(userName: getRepositoryUsername(), password: getRepositoryPassword())
-//                }
-//
-//                pom.project {
-//                    name properties.getProperty("POM_NAME")
-//                    packaging properties.getProperty("POM_PACKAGING")
-//                    description properties.getProperty("POM_DESCRIPTION")
-//                    url properties.getProperty("POM_URL")
-//
-//                    scm {
-//                        url properties.getProperty("POM_SCM_URL")
-//                        connection properties.getProperty("POM_SCM_CONNECTION")
-//                        developerConnection properties.getProperty("POM_SCM_DEV_CONNECTION")
-//                    }
-//
-//                    licenses {
-//                        license {
-//                            name properties.getProperty("POM_LICENCE_NAME")
-//                            url properties.getProperty("POM_LICENCE_URL")
-//                            distribution properties.getProperty("POM_LICENCE_DIST")
-//                        }
-//                    }
-//
-//                    developers {
-//                        developer {
-//                            id properties.getProperty("POM_DEVELOPER_ID")
-//                            name properties.getProperty("POM_DEVELOPER_NAME")
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//    }
-//
-//    signing {
-//        required { isReleaseBuild() && gradle.taskGraph.hasTask("uploadArchives") }
-//        sign configurations.archives
-//    }
-//
-//    //task androidJavadocs(type: Javadoc) {
-//    //source = android.sourceSets.main.allJava
-//    //}
-//
-//    //task androidJavadocsJar(type: Jar, dependsOn: androidJavadocs) {
-//    //classifier = 'javadoc'
-//    //from androidJavadocs.destinationDir
-//    //}
-//
-//    task androidSourcesJar(type: Jar) {
-//        classifier = 'sources'
-//        from android.sourceSets.main.java.sourceFiles
-//    }
-//
-//    artifacts {
-//        archives androidSourcesJar
-//    }
-//}
-//apply from: 'maven-push.gradle'
+apply plugin: 'maven'
+apply plugin: 'signing'
 
-/*bintray {
-    user = properties.getProperty("bintray.user")
-    key = properties.getProperty("bintray.apikey")
+def isReleaseBuild() {
+    return VERSION_NAME.contains("SNAPSHOT") == false
 }
-ext {
-    bintrayRepo = 'RetrofitRetry'
-    bintrayName = 'retrofit-retry'
 
-    publishedGroupId = 'io.github.dalwadi2'
-    libraryName = 'RetrofitRetry'
-    artifact = 'retrofit-retry'
+def getReleaseRepositoryUrl() {
+    return hasProperty('RELEASE_REPOSITORY_URL') ? RELEASE_REPOSITORY_URL
+            : "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+}
 
-    libraryDescription = 'Network library which helps to apply Retry Policy using Retrofit2'
+def getSnapshotRepositoryUrl() {
+    return hasProperty('SNAPSHOT_REPOSITORY_URL') ? SNAPSHOT_REPOSITORY_URL
+            : "https://oss.sonatype.org/content/repositories/snapshots/"
+}
 
-    siteUrl = properties.getProperty("POM_URL")
-    gitUrl = properties.getProperty("POM_SCM_URL")
+def getRepositoryUsername() {
+    return hasProperty('NEXUS_USERNAME') ? NEXUS_USERNAME : ""
+}
 
-    libraryVersion = properties.getProperty("VERSION_NAME")
+def getRepositoryPassword() {
+    return hasProperty('NEXUS_PASSWORD') ? NEXUS_PASSWORD : ""
+}
 
-    developerId = properties.getProperty("POM_DEVELOPER_ID")
-    developerName = properties.getProperty("POM_DEVELOPER_NAME")
-    developerEmail = properties.getProperty("POM_DEVELOPER_EMAIL")
+afterEvaluate { project ->
+    uploadArchives {
+        repositories {
+            mavenDeployer {
+                beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
 
-    licenseName = properties.getProperty("POM_LICENCE_NAME")
-    licenseUrl = properties.getProperty("POM_LICENCE_URL")
-    allLicenses = ["Apache-2.0"]
-}*/
-//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
-//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+                pom.groupId = GROUP
+                pom.artifactId = POM_ARTIFACT_ID
+                pom.version = VERSION_NAME
 
+                repository(url: getReleaseRepositoryUrl()) {
+                    authentication(userName: getRepositoryUsername(), password: getRepositoryPassword())
+                }
+                snapshotRepository(url: getSnapshotRepositoryUrl()) {
+                    authentication(userName: getRepositoryUsername(), password: getRepositoryPassword())
+                }
 
-//apply plugin: 'maven'
-//apply plugin: 'signing'
-//
-//def isReleaseBuild() {
-//    return VERSION_NAME.contains("SNAPSHOT") == false
-//}
-//
-//def getReleaseRepositoryUrl() {
-//    return hasProperty('RELEASE_REPOSITORY_URL') ? RELEASE_REPOSITORY_URL
-//            : "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
-//}
-//
-//def getSnapshotRepositoryUrl() {
-//    return hasProperty('SNAPSHOT_REPOSITORY_URL') ? SNAPSHOT_REPOSITORY_URL
-//            : "https://oss.sonatype.org/content/repositories/snapshots/"
-//}
-//
-//def getRepositoryUsername() {
-//    return hasProperty('NEXUS_USERNAME') ? NEXUS_USERNAME : ""
-//}
-//
-//def getRepositoryPassword() {
-//    return hasProperty('NEXUS_PASSWORD') ? NEXUS_PASSWORD : ""
-//}
-//
-//afterEvaluate { project ->
-//    uploadArchives {
-//        repositories {
-//            mavenDeployer {
-//                beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
-//
-//                pom.groupId = GROUP
-//                pom.artifactId = POM_ARTIFACT_ID
-//                pom.version = VERSION_NAME
-//
-//                repository(url: getReleaseRepositoryUrl()) {
-//                    authentication(userName: getRepositoryUsername(), password: getRepositoryPassword())
-//                }
-//                snapshotRepository(url: getSnapshotRepositoryUrl()) {
-//                    authentication(userName: getRepositoryUsername(), password: getRepositoryPassword())
-//                }
-//
-//                pom.project {
-//                    name POM_NAME
-//                    packaging POM_PACKAGING
-//                    description POM_DESCRIPTION
-//                    url POM_URL
-//
-//                    scm {
-//                        url POM_SCM_URL
-//                        connection POM_SCM_CONNECTION
-//                        developerConnection POM_SCM_DEV_CONNECTION
-//                    }
-//
-//                    licenses {
-//                        license {
-//                            name POM_LICENCE_NAME
-//                            url POM_LICENCE_URL
-//                            distribution POM_LICENCE_DIST
-//                        }
-//                    }
-//
-//                    developers {
-//                        developer {
-//                            id POM_DEVELOPER_ID
-//                            name POM_DEVELOPER_NAME
-//                        }
-//                    }
-//                }
-//            }
-//        }
+                pom.project {
+                    name POM_NAME
+                    packaging POM_PACKAGING
+                    description POM_DESCRIPTION
+                    url POM_URL
+
+                    scm {
+                        url POM_SCM_URL
+                        connection POM_SCM_CONNECTION
+                        developerConnection POM_SCM_DEV_CONNECTION
+                    }
+
+                    licenses {
+                        license {
+                            name POM_LICENCE_NAME
+                            url POM_LICENCE_URL
+                            distribution POM_LICENCE_DIST
+                        }
+                    }
+
+                    developers {
+                        developer {
+                            id POM_DEVELOPER_ID
+                            name POM_DEVELOPER_NAME
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    signing {
+        required { isReleaseBuild() && gradle.taskGraph.hasTask("uploadArchives") }
+        sign configurations.archives
+    }
+
+//    task androidJavadocs(type: Javadoc) {
+//        source = android.sourceSets.main.java.srcDirs
+//        classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
 //    }
 //
-//    signing {
-//        required { isReleaseBuild() && gradle.taskGraph.hasTask("uploadArchives") }
-//        sign configurations.archives
+//    task androidJavadocsJar(type: Jar, dependsOn: androidJavadocs) {
+//        classifier = 'javadoc'
+//        from androidJavadocs.destinationDir
 //    }
-//
-////    task androidJavadocs(type: Javadoc) {
-////        source = android.sourceSets.main.java.srcDirs
-////        classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-////    }
-////
-////    task androidJavadocsJar(type: Jar, dependsOn: androidJavadocs) {
-////        classifier = 'javadoc'
-////        from androidJavadocs.destinationDir
-////    }
-//
-//    task androidSourcesJar(type: Jar) {
-//        classifier = 'sources'
-//        from android.sourceSets.main.java.sourceFiles
-//    }
-//
-//    artifacts {
-//        archives androidSourcesJar
-////        archives androidJavadocsJar
-//    }
-//}
-//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
-//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+
+    task androidSourcesJar(type: Jar) {
+        classifier = 'sources'
+        from android.sourceSets.main.java.sourceFiles
+    }
+
+    artifacts {
+        archives androidSourcesJar
+//        archives androidJavadocsJar
+    }
+}
