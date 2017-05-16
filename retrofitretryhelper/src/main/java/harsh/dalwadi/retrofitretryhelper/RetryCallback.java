@@ -24,7 +24,7 @@ class RetryCallback<T> implements CustomCallback<T> {
                 retry();
             } else {
                 Log.w(TAG, "Fail Response with - " + response.code());
-                onFinalFail();
+                onFinalFail(response.code(),call,response);
             }
         } else {
             onFinalResponse(call, response);
@@ -38,8 +38,8 @@ class RetryCallback<T> implements CustomCallback<T> {
     }
 
     @Override
-    public void onFailResponse() {
-        onFinalFail();
+    public void onFailResponse(int errorCode, Call<T> call, Response<T> response) {
+        onFinalFail(response.code(), call, response);
     }
 
     public void onFinalResponse(Call<T> call, Response<T> response) {
@@ -50,7 +50,7 @@ class RetryCallback<T> implements CustomCallback<T> {
 
     }
 
-    public void onFinalFail() {
+    public void onFinalFail(int errorCode, Call<T> call, Response<T> response) {
 
     }
 
