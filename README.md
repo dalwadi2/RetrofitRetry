@@ -6,8 +6,14 @@
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.dalwadi2/retrofit-retry/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.dalwadi2/retrofit-retry)
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 
-How to use this lib in your project: 
+## Releases:
 
+#### Current release: 1.0.0.
+
+You can see all the library releases [here](https://github.com/dalwadi2/RetrofitRetry/releases).
+
+How to use this lib in your project: 
+## Gradle
 Step 1. Add the JitPack repository to your build file
 Add it in your root build.gradle at the end of repositories:
 ```sh
@@ -29,8 +35,15 @@ or
 ```sh
 compile 'io.github.dalwadi2:retrofit-retry:1.0.0'
 ```
-
-### Sample
+## Maven
+```sh
+<dependency>
+    <groupId>io.github.dalwadi2</groupId>
+    <artifactId>retrofit-retry</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+## Sample
 
 - First you have to Create Object of your ApiInterface like below : 
 ```sh
@@ -64,7 +77,7 @@ I already added bellow Repos in this Library.
 compile 'com.squareup.retrofit2:retrofit:2.2.0'
 compile 'com.squareup.retrofit2:converter-gson:2.0.2'
 ```
-### proguard-rules.pro
+## proguard-rules.pro
 ```
 -dontnote retrofit2.Platform
 -dontwarn retrofit2.Platform$Java8
@@ -74,12 +87,12 @@ compile 'com.squareup.retrofit2:converter-gson:2.0.2'
 ```
 ### Todos
 
-* [x] Put listener for Every Retries
-* [x] Put method for Each fail Response
+* [ ] Put listener for Every Retries
+* [ ] Put method for Each fail Response
 
 > Feel free to Contribute
 
-### License
+## License
 
     Copyright 2017 Harsh Dalwadi
 
