@@ -14,3 +14,4 @@ retrofitretryhelper/libs/
 retrofitretryhelper/src/main/res/drawable/
 private_key_sender.asc
 public_key_sender.asc
+/retrofitretryhelper/maven-push.gradle
