@@ -5,13 +5,13 @@ import retrofit2.Response;
 
 public class RetryHelper {
     private static final int DEFAULT_RETRIES = 0;
-    private static final int SUCCESS = 200;
+    private static int SUCCESS_CODE = 200;
 
     public static <T> void enqueueRetry(Call<T> call, final int retryCount, final CustomCallback<T> callback) {
         call.enqueue(new RetryCallback<T>(call, retryCount) {
             @Override
-            public void onFinalFail() {
-                callback.onFailResponse();
+            public void onFinalFail(int errorCode, Call<T> call, Response<T> response) {
+                callback.onFailResponse(errorCode, call, response);
             }
 
             @Override
@@ -31,8 +31,15 @@ public class RetryHelper {
     }
 
     static boolean isCallSuccess(Response response) {
-        return response.code() == SUCCESS;
+        return response.code() == SUCCESS_CODE;
     }
 
+    public static int getSuccessCode() {
+        return SUCCESS_CODE;
+    }
+
+    public static void setSuccessCode(int successCode) {
+        RetryHelper.SUCCESS_CODE = successCode;
+    }
 
 }

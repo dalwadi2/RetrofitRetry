@@ -2,6 +2,7 @@ package com.samcom.retrofitretry;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -41,10 +42,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         ApiClient.getClient().create(ApiInterface.class);
                 Call<Sample> responseCall = apiService.VIDEO_NOTY_CALL();
 
+                // Now you can set your own success code for more customization
+                RetryHelper.setSuccessCode(200);
+
                 RetryHelper.enqueueRetry(responseCall, 3, new CustomCallback<Sample>() {
                     @Override
-                    public void onFailResponse() {
+                    public void onFailResponse(int errorCode, Call<Sample> call, Response<Sample> response) {
                         progress.hideDialog();
+                        Log.e(TAG, "onFailResponse() called with: errorCode = [" + errorCode + "], call = [" + call + "], response = [" + response + "]");
                         Toast.makeText(MainActivity.this, "Failed After Retry", Toast.LENGTH_SHORT).show();
                     }
 
