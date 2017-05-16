@@ -8,7 +8,7 @@
 
 ## Releases:
 
-#### Current release: 1.0.0.
+#### Current release: 1.2.0.
 
 You can see all the library releases [here](https://github.com/dalwadi2/RetrofitRetry/releases).
 
