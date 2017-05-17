@@ -33,14 +33,14 @@ dependencies {
 or
 
 ```sh
-compile 'io.github.dalwadi2:retrofit-retry:1.0.0'
+compile 'io.github.dalwadi2:retrofit-retry:1.2.0'
 ```
 ## Maven
 ```sh
 <dependency>
     <groupId>io.github.dalwadi2</groupId>
     <artifactId>retrofit-retry</artifactId>
-    <version>1.0.0</version>
+    <version>1.2.0</version>
 </dependency>
 ```
 ## Sample
