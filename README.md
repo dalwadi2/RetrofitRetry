@@ -16,7 +16,7 @@ How to use this lib in your project:
 ## Gradle
 Step 1. Add the JitPack repository to your build file
 Add it in your root build.gradle at the end of repositories:
-```sh
+```groovy
 allprojects {
 	repositories {
 		maven { url 'https://jitpack.io' }
@@ -25,18 +25,18 @@ allprojects {
 ```
 
 Step 2. Add the dependency
-```sh
+```groovy
 dependencies {
 	compile 'com.github.dalwadi2:RetrofitRetry:v1.2'
 }
 ```
 or
 
-```sh
+```groovy
 compile 'io.github.dalwadi2:retrofit-retry:1.2.0'
 ```
 ## Maven
-```sh
+```xml
 <dependency>
     <groupId>io.github.dalwadi2</groupId>
     <artifactId>retrofit-retry</artifactId>
