@@ -46,17 +46,19 @@ compile 'io.github.dalwadi2:retrofit-retry:1.2.0'
 ## Sample
 
 - First you have to Create Object of your ApiInterface like below : 
-```sh
+```java
 ApiInterface apiService =
                         ApiClient.getClient().create(ApiInterface.class);
                 Call<Sample> responseCall = apiService.VIDEO_NOTY_CALL();
 ```
 - After then you have to Implement this method (Here Default Retry Count is 0)
-```sh
+```java
  RetryHelper.enqueueRetry(responseCall, 3, new CustomCallback<Sample>() {
                     @Override
-                    public void onFailResponse() {
-                        // Here you get the fail callback
+                   @Override
+                    public void onFailResponse(int errorCode, Call<Sample> call, Response<Sample> response) {
+                        progress.hideDialog();
+                        Log.e(TAG, "onFailResponse() called with: errorCode = [" + errorCode + "], call = [" + call + "], response = [" + response + "]");
                         Toast.makeText(MainActivity.this, "Failed After Retry", Toast.LENGTH_SHORT).show();
                     }
 
@@ -70,6 +72,10 @@ ApiInterface apiService =
                         // Code of Failure
                     }
                 });
+```
+- Now you can also specify the your own success code.
+```java
+   RetryHelper.setSuccessCode(200);
 ```
 > PS: If you are using this library, you don't have to add extra Retrofit 2.0 Repository.
 I already added bellow Repos in this Library.
