@@ -49,7 +49,7 @@ compile 'io.github.dalwadi2:retrofit-retry:1.2.0'
 ```java
 ApiInterface apiService =
                         ApiClient.getClient().create(ApiInterface.class);
-                Call<Sample> responseCall = apiService.VIDEO_NOTY_CALL();
+Call<Sample> responseCall = apiService.VIDEO_NOTY_CALL();
 ```
 - After then you have to Implement this method (Here Default Retry Count is 0)
 ```java
