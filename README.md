@@ -5,6 +5,7 @@
 [![](https://jitpack.io/v/dalwadi2/RetrofitRetry.svg)](https://jitpack.io/#dalwadi2/RetrofitRetry/v1.1)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.dalwadi2/retrofit-retry/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.dalwadi2/retrofit-retry)
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
+[![Twitter Follow](https://img.shields.io/twitter/follow/HarshDalwadi27.svg?style=social)](https://twitter.com/HarshDalwadi27)
 
 ## Releases:
 
