@@ -57,7 +57,6 @@ Call<Sample> responseCall = apiService.VIDEO_NOTY_CALL();
 - After then you have to Implement this method (Here Default Retry Count is 0)
 ```java
  RetryHelper.enqueueRetry(responseCall, 3, new CustomCallback<Sample>() {
-                    @Override
                    @Override
                     public void onFailResponse(int errorCode, Call<Sample> call, Response<Sample> response) {
                         progress.hideDialog();
