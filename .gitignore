@@ -1,6 +1,5 @@
 *.iml
 .gradle
-/local.properties
 /.idea/workspace.xml
 /.idea/libraries
 .DS_Store
@@ -14,9 +13,9 @@ retrofitretryhelper/libs/
 retrofitretryhelper/src/main/res/drawable/
 /retrofitretryhelper/maven-push.gradle
 /gradle.properties
-private_key_sender.asc
-public_key_sender.asc
 gradle.properties
 local.properties
 public_key_sender.asc
 private_key_sender.asc
+/build/
+/.idea/
