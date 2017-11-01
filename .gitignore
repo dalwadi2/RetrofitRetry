@@ -12,8 +12,6 @@ app/libs/
 app/src/main/res/drawable/
 retrofitretryhelper/libs/
 retrofitretryhelper/src/main/res/drawable/
-private_key_sender.asc
-public_key_sender.asc
 /retrofitretryhelper/maven-push.gradle
 /gradle.properties
 private_key_sender.asc
