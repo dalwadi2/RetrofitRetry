@@ -16,3 +16,7 @@ retrofitretryhelper/src/main/res/drawable/
 /gradle.properties
 private_key_sender.asc
 public_key_sender.asc
+gradle.properties
+local.properties
+public_key_sender.asc
+private_key_sender.asc
