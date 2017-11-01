@@ -66,11 +66,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     @Override
                     public void onFailure(Call<Sample> call, Throwable t) {
                         progress.hideDialog();
+                        Log.e(TAG, "onFailure: " + t.getMessage());
                         Toast.makeText(MainActivity.this, "No Internet Connection", Toast.LENGTH_SHORT).show();
                     }
                 });
 
-                break;
         }
     }
 }

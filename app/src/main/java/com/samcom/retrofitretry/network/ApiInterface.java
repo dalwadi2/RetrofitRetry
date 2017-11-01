@@ -11,5 +11,4 @@ public interface ApiInterface {
 
     @GET(AppConfig.URL.URL_SAMPLE)
     Call<Sample> VIDEO_NOTY_CALL();
-
 }
