@@ -16,3 +16,5 @@ private_key_sender.asc
 public_key_sender.asc
 /retrofitretryhelper/maven-push.gradle
 /gradle.properties
+private_key_sender.asc
+public_key_sender.asc
