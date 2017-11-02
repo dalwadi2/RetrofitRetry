@@ -11,12 +11,19 @@
 
 ## Releases:
 
-#### Current release: 1.2.0.
+#### Current release: 1.3.0.
 
 You can see all the library releases [here](https://github.com/dalwadi2/RetrofitRetry/releases).
 
 How to use this lib in your project: 
 ## Gradle
+```groovy
+compile 'io.github.dalwadi2:retrofit-retry:1.3.0'
+```
+
+or
+
+
 Step 1. Add the JitPack repository to your build file
 Add it in your root build.gradle at the end of repositories:
 ```groovy
@@ -33,17 +40,12 @@ dependencies {
 	compile 'com.github.dalwadi2:RetrofitRetry:v1.2'
 }
 ```
-or
-
-```groovy
-compile 'io.github.dalwadi2:retrofit-retry:1.2.0'
-```
 ## Maven
 ```xml
 <dependency>
     <groupId>io.github.dalwadi2</groupId>
     <artifactId>retrofit-retry</artifactId>
-    <version>1.2.0</version>
+    <version>1.3.0</version>
 </dependency>
 ```
 ## Sample
