@@ -104,7 +104,7 @@ compile 'com.squareup.retrofit2:converter-gson:2.0.2'
 
 ## License
 
-    Copyright 2017 Harsh Dalwadi
+    Copyright 2017-18 Harsh Dalwadi
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
